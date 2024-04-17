@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" media="screen" />
+    <title>Lista de Contatos</title>
+</head>
+
+<body>
+    <div>
+        <img
+            src="./kisspng-blue-telephone-yellow-computer-file-blue-yellow-order-phone-5aa8c3619f1943.0642608315210095056517.jpg">
+    </div>
+
+
+    <div>
+        <h1>Buscador de Lista Javascrpit</h1>
+        <input placeholder="Digite o nome do seu contato" type="text" id="nomeContato">
+        <p id="resultado"></p>
+        <button onclick="buscarContato()">Buscar</button>
+    </div>
+
+    <script>
+        const listaContatos = [
+            { nome: "Antonio", telefone: "(98) 99132-9898" },
+            { nome: "Jarbas", telefone: "(98) 78979-8678" },
+            { nome: "Ana", telefone: "(98) 99132-9898" },
+            { nome: "Beraldo", telefone: "(98) 78979-8678" },
+            { nome: "Firmino", telefone: "(98) 99132-9898" },
+            { nome: "Neymar", telefone: "(98) 78979-8678" },
+            { nome: "Ronaldinho", telefone: "(98) 99132-9898" },
+            { nome: "Marta", telefone: "(98) 78979-8678" },
+            { nome: "Formiga", telefone: "(98) 99132-9898" },
+            { nome: "Adelaide", telefone: "(98) 78979-8678" },
+            { nome: "Patricia Poeta", telefone: "(98) 99132-9898" },
+            { nome: "Harry Potter", telefone: "(98) 78979-8678" },
+            { nome: "Frodo Bolseiro", telefone: "(98) 99132-9898" },
+            { nome: "William Bonner", telefone: "(98) 78979-8678" },
+        
+        ];
+
+        function buscarContato() {
+            const nomeBuscado = document.getElementById("nomeContato").value;
+            let encontrado = false;
+
+            for (let i = 0; i < listaContatos.length; i++) {
+                if (listaContatos[i].nome.toLowerCase() === nomeBuscado.toLowerCase()) {
+                    document.getElementById("resultado").textContent = `Contato encontrado: ${listaContatos[i].telefone}`;
+                    encontrado = true;
+                    break;
+                }
+            }
+
+            if (!encontrado) {
+                document.getElementById("resultado").textContent = "Contato não encontrado.";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
