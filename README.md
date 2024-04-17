@@ -4,6 +4,6 @@
 <br>
 <p> Quando o nome é encontrado (true) o gerador envia o contato telefonico para o paragrafo mostrando apenas o número, quando não encontra (false) ele informa que o contato não foi encontrado </p>
 
-<p>Caso tenha interesse em testar, no link abaixo procure o telefone do Neymar, se conseguir falar com ele diga que ele precisa cair menos.</p>
 
-https://jackdanielslz190.github.io/Lista-de-Contatos/
+
+
